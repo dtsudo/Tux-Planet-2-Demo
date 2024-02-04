@@ -1,0 +1,7 @@
+let GlobalConstants = {
+    FILE_ID_FOR_SOUND_AND_MUSIC_VOLUME: 1,
+    FILE_ID_FOR_SESSION_STATE: 2,
+    WINDOW_WIDTH: 1000,
+    WINDOW_HEIGHT: 700,
+    STANDARD_BACKGROUND_COLOR: { r: 225, g: 225, b: 225, alpha: 255 }
+};
