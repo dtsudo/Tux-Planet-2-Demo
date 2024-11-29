@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'> 
+<head> 
+    <meta charset='utf-8' /> 
+    <title>Tux Planet 2</title> 
+
+    <script src='Game.js'></script> 
+    <script src='GameInitializer.js'></script> 
+    <script src='DTLibrary/BuildType.js'></script> 
+    <script src='DTLibrary/CanvasDisplay.js'></script> 
+    <script src='DTLibrary/CanvasDisplay_Font.js'></script> 
+    <script src='DTLibrary/CanvasDisplay_Images.js'></script> 
+    <script src='DTLibrary/CanvasDisplay_Rectangle.js'></script> 
+    <script src='DTLibrary/CopiedKeyboard.js'></script> 
+    <script src='DTLibrary/CopiedMouse.js'></script> 
+    <script src='DTLibrary/DTColor.js'></script> 
+    <script src='DTLibrary/DTDeterministicRandom.js'></script> 
+    <script src='DTLibrary/DTMath.js'></script> 
+    <script src='DTLibrary/DTMathHelper.js'></script> 
+    <script src='DTLibrary/EmptyKeyboard.js'></script> 
+    <script src='DTLibrary/EmptyMouse.js'></script> 
+    <script src='DTLibrary/FileIO.js'></script> 
+    <script src='DTLibrary/GameFont.js'></script> 
+    <script src='DTLibrary/GameImage.js'></script> 
+    <script src='DTLibrary/GameKeyboard.js'></script> 
+    <script src='DTLibrary/GameMouse.js'></script> 
+    <script src='DTLibrary/GameMusic.js'></script> 
+    <script src='DTLibrary/GameMusicOutput.js'></script> 
+    <script src='DTLibrary/GameSound.js'></script> 
+    <script src='DTLibrary/GameSoundOutput.js'></script> 
+    <script src='DTLibrary/IDisplay.js'></script> 
+    <script src='DTLibrary/IFrame.js'></script> 
+    <script src='DTLibrary/IKeyboard.js'></script> 
+    <script src='DTLibrary/IMouse.js'></script> 
+    <script src='DTLibrary/IMusicOutput.js'></script> 
+    <script src='DTLibrary/ISoundOutput.js'></script> 
+    <script src='DTLibrary/MutedSoundOutput.js'></script> 
+    <script src='DTLibrary/TranslatedDisplayOutput.js'></script> 
+    <script src='DTLibrary/VersionInfo.js'></script> 
+    <script src='DTLibrary/VolumeUtil.js'></script> 
+    <script src='TuxPlanet2/Background_Ocean.js'></script> 
+    <script src='TuxPlanet2/BossHealthDisplay.js'></script> 
+    <script src='TuxPlanet2/Button.js'></script> 
+    <script src='TuxPlanet2/ChooseDifficultyFrame.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame_DesignAndCoding.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame_Font.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame_Images.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame_Music.js'></script> 
+    <script src='TuxPlanet2/CreditsFrame_Sound.js'></script> 
+    <script src='TuxPlanet2/Cutscene_Level1Boss.js'></script> 
+    <script src='TuxPlanet2/Difficulty.js'></script> 
+    <script src='TuxPlanet2/EnemyCollision.js'></script> 
+    <script src='TuxPlanet2/EnemyProcessing.js'></script> 
+    <script src='TuxPlanet2/Enemy_Background_Explode.js'></script> 
+    <script src='TuxPlanet2/Enemy_Background_ExplodeI.js'></script> 
+    <script src='TuxPlanet2/Enemy_Background_Instructions.js'></script> 
+    <script src='TuxPlanet2/Enemy_Background_Poof.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_BouncySnow.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_Freezewave.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_Homing.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_Iceball.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_Noone.js'></script> 
+    <script src='TuxPlanet2/Enemy_Bullet_Strawberry.js'></script> 
+    <script src='TuxPlanet2/Enemy_Flyamanita.js'></script> 
+    <script src='TuxPlanet2/Enemy_FlyamanitaBig.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1BossCutscene.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1Boss_Dead.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1Boss_Phase1.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1Boss_Phase2.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level1Boss_Phase3.js'></script> 
+    <script src='TuxPlanet2/Enemy_Level2.js'></script> 
+    <script src='TuxPlanet2/Enemy_Smartcap.js'></script> 
+    <script src='TuxPlanet2/Enemy_Snowball.js'></script> 
+    <script src='TuxPlanet2/FrameInput.js'></script> 
+    <script src='TuxPlanet2/FrameInputHistory.js'></script> 
+    <script src='TuxPlanet2/GameEntryFrame.js'></script> 
+    <script src='TuxPlanet2/GameFrame.js'></script> 
+    <script src='TuxPlanet2/GameState.js'></script> 
+    <script src='TuxPlanet2/GameStateProcessing.js'></script> 
+    <script src='TuxPlanet2/GameStateRendering.js'></script> 
+    <script src='TuxPlanet2/GlobalConstants.js'></script> 
+    <script src='TuxPlanet2/GlobalState.js'></script> 
+    <script src='TuxPlanet2/IBackground.js'></script> 
+    <script src='TuxPlanet2/ICutscene.js'></script> 
+    <script src='TuxPlanet2/IEnemy.js'></script> 
+    <script src='TuxPlanet2/InitialLoadingScreenFrame.js'></script> 
+    <script src='TuxPlanet2/Level.js'></script> 
+    <script src='TuxPlanet2/LevelCompleteFrame.js'></script> 
+    <script src='TuxPlanet2/MapData.js'></script> 
+    <script src='TuxPlanet2/MapDataLayer.js'></script> 
+    <script src='TuxPlanet2/MapDataLevel.js'></script> 
+    <script src='TuxPlanet2/MapDataLevelUtil.js'></script> 
+    <script src='TuxPlanet2/MapDataTileset.js'></script> 
+    <script src='TuxPlanet2/MusicVolumePicker.js'></script> 
+    <script src='TuxPlanet2/PauseMenuFrame.js'></script> 
+    <script src='TuxPlanet2/PlayerBulletState.js'></script> 
+    <script src='TuxPlanet2/PlayerBulletStateProcessing.js'></script> 
+    <script src='TuxPlanet2/PlayerState.js'></script> 
+    <script src='TuxPlanet2/PlayerStateProcessing.js'></script> 
+    <script src='TuxPlanet2/PlayerStateProcessing_Movement.js'></script> 
+    <script src='TuxPlanet2/ReplayFrame.js'></script> 
+    <script src='TuxPlanet2/ReplayPauseMenuFrame.js'></script> 
+    <script src='TuxPlanet2/SaveAndLoadData.js'></script> 
+    <script src='TuxPlanet2/SavedDataMigration_ToV1_01.js'></script> 
+    <script src='TuxPlanet2/SessionState.js'></script> 
+    <script src='TuxPlanet2/SolidLayerUtil.js'></script> 
+    <script src='TuxPlanet2/SoundAndMusicVolumePicker.js'></script> 
+    <script src='TuxPlanet2/SoundVolumePicker.js'></script> 
+    <script src='TuxPlanet2/TestingAchievementsFrame.js'></script> 
+    <script src='TuxPlanet2/TestingClickUrlFrame.js'></script> 
+    <script src='TuxPlanet2/TestingFontFrame.js'></script> 
+    <script src='TuxPlanet2/TestingFontFrame2.js'></script> 
+    <script src='TuxPlanet2/TestingFrame.js'></script> 
+    <script src='TuxPlanet2/TestingKeyboardFrame.js'></script> 
+    <script src='TuxPlanet2/TestingMouseFrame.js'></script> 
+    <script src='TuxPlanet2/TestingMusicFrame.js'></script> 
+    <script src='TuxPlanet2/TestingSoundFrame.js'></script> 
+    <script src='TuxPlanet2/Tilemap.js'></script> 
+    <script src='TuxPlanet2/TilemapLevelInfo.js'></script> 
+    <script src='TuxPlanet2/TilemapLevelInfo_Level1.js'></script> 
+    <script src='TuxPlanet2/TilemapLevelInfo_Level2.js'></script> 
+    <script src='TuxPlanet2/TilemapRendering.js'></script> 
+    <script src='TuxPlanet2/TilemapUtil.js'></script> 
+    <script src='TuxPlanet2/Tileset.js'></script> 
+    <script src='TuxPlanet2/TitleScreenFrame.js'></script> 
+
+</head> 
+<body> 
+    <script> 
+        Game.beginGame(); 
+    </script> 
+</body> 
+</html> 
